@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="16KB Pagesize 优化与资源下载 - 高性能静态网站，专注于 Google 16KB Pagesize 理念">
+    <title>16KB Pagesize 优化与资源下载</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;color:#212121;background:#fff}
+        .container{max-width:1200px;margin:0 auto;padding:0 16px}
+        header{background:#1976d2;color:#fff;padding:1rem 0;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+        header .container{display:flex;align-items:center;justify-content:space-between}
+        .logo{font-size:1.5rem;font-weight:700}
+        main{padding:2rem 0;min-height:calc(100vh - 200px)}
+        section{margin-bottom:3rem}
+        h1{font-size:2rem;margin-bottom:1rem;color:#1976d2}
+        h2{font-size:1.75rem;margin-bottom:.75rem;color:#424242;border-bottom:2px solid #e0e0e0;padding-bottom:.5rem}
+        h3{font-size:1.25rem;margin-bottom:.5rem;color:#616161;margin-top:1.5rem}
+        p{margin-bottom:1rem;text-align:justify}
+        .download-section{background:#f5f5f5;padding:2rem;border-radius:8px;margin-top:2rem}
+        .btn{display:inline-block;padding:.75rem 1.5rem;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-weight:500;transition:background .3s;margin:.5rem .5rem .5rem 0;border:none;cursor:pointer;font-size:1rem}
+        .btn:hover{background:#1565c0}
+        .btn:active{background:#0d47a1}
+        footer{background:#424242;color:#fff;padding:2rem 0;margin-top:3rem;text-align:center}
+        footer a{color:#90caf9;text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        .ads-container{margin:1.5rem 0;text-align:center;min-height:100px}
+        @media (max-width:768px){h1{font-size:1.5rem}h2{font-size:1.5rem}.container{padding:0 12px}header .container{flex-direction:column;gap:.5rem}.logo{font-size:1.25rem}.btn{display:block;width:100%;margin:.5rem 0}}
+        @media (min-width:769px){.content-wrapper{display:grid;grid-template-columns:1fr 300px;gap:2rem}.sidebar{position:sticky;top:20px;height:fit-content}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">16KB Pagesize</div>
+            <div>优化与资源下载</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- AdSense Header Ad -->
+            <div class="ads-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="main-content">
+                    <section class="content-section">
+                        <h1>16KB Pagesize 优化与资源下载</h1>
+                        
+                        <h2>什么是 16KB Pagesize？</h2>
+                        <p>Google 提出的 16KB Pagesize 理念是 Web 性能优化的核心原则之一。它强调首次加载的关键资源（HTML、CSS、JavaScript）应该控制在 16KB 以内，以确保页面能够在单次网络往返（RTT）中完成关键渲染路径的加载。这一理念基于现代网络协议和浏览器渲染机制，旨在实现极致的首屏加载速度。</p>
+                        
+                        <h3>为什么 16KB 如此重要？</h3>
+                        <p>在典型的 TCP/IP 网络中，初始拥塞窗口（Initial Congestion Window）通常为 10-14 个数据包，每个数据包约 1.4KB。这意味着在第一次往返时间内，浏览器最多只能接收约 14-16KB 的数据。如果关键资源超过这个限制，浏览器就需要等待额外的网络往返，导致首屏渲染延迟。通过将关键资源控制在 16KB 以内，我们可以确保页面在第一次网络往返后就能开始渲染，大幅提升用户体验。</p>
+                        
+                        <h3>实现 16KB Pagesize 的关键技术</h3>
+                        <p>实现这一目标需要多方面的优化策略：首先，将关键 CSS 内联到 HTML 的 &lt;head&gt; 标签中，避免额外的 HTTP 请求；其次，使用代码分割和延迟加载技术，将非关键 JavaScript 代码推迟执行；再次，采用资源压缩（Gzip/Brotli）和代码混淆，减少传输体积；最后，优化 HTML 结构，移除不必要的空白和注释，使用语义化标签提高解析效率。这些技术的综合运用，能够将页面关键资源压缩到 16KB 以内，实现极速加载。</p>
+                    </section>
+
+                    <section class="download-section">
+                        <h2>资源下载</h2>
+                        <p>以下资源专为 16KB Pagesize 优化设计，可直接下载使用：</p>
+                        
+                        <a href="#ijkplayer_so_download" class="btn" id="ijkplayerBtn">下载 ijkplayer 16KB SO</a>
+                        <a href="#flutter_16kb_repo" class="btn" id="flutterBtn">获取 Flutter 16KB 资源</a>
+                    </section>
+                </div>
+
+                <!-- Sidebar for AdSense -->
+                <aside class="sidebar">
+                    <div class="ads-container">
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0987654321" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 16KB Pagesize 优化与资源下载站. 保留所有权利.</p>
+            <p>
+                <a href="privacy.html">隐私政策</a> | 
+                <a href="contact.html">联系我们</a>
+            </p>
+            <p style="margin-top:1rem;font-size:.875rem;color:#bdbdbd">创建人: Fanei</p>
+        </div>
+    </footer>
+
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.getElementById('ijkplayerBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 这里可以添加实际的下载逻辑或跳转
+            window.location.href = '#ijkplayer_so_download';
+        });
+        
+        document.getElementById('flutterBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            // 这里可以添加实际的下载逻辑或跳转
+            window.location.href = '#flutter_16kb_repo';
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

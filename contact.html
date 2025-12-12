@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="16KB Pagesize 优化与资源下载站 - 联系我们">
+    <title>联系我们 - 16KB Pagesize</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;color:#212121;background:#fff}
+        .container{max-width:1200px;margin:0 auto;padding:0 16px}
+        header{background:#1976d2;color:#fff;padding:1rem 0;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+        header .container{display:flex;align-items:center;justify-content:space-between}
+        .logo{font-size:1.5rem;font-weight:700}
+        .nav-link{color:#fff;text-decoration:none;margin-left:1rem}
+        .nav-link:hover{text-decoration:underline}
+        main{padding:2rem 0;min-height:calc(100vh - 200px)}
+        h1{font-size:2rem;margin-bottom:1rem;color:#1976d2}
+        h2{font-size:1.75rem;margin-bottom:.75rem;color:#424242;border-bottom:2px solid #e0e0e0;padding-bottom:.5rem;margin-top:2rem}
+        p{margin-bottom:1rem}
+        .contact-info{background:#f5f5f5;padding:2rem;border-radius:8px;margin:2rem 0}
+        .contact-item{margin-bottom:1.5rem}
+        .contact-item strong{display:block;color:#1976d2;margin-bottom:.5rem;font-size:1.1rem}
+        .contact-item a{color:#1976d2;text-decoration:none}
+        .contact-item a:hover{text-decoration:underline}
+        .contact-form{background:#f5f5f5;padding:2rem;border-radius:8px;margin:2rem 0}
+        .form-group{margin-bottom:1.5rem}
+        label{display:block;margin-bottom:.5rem;font-weight:500;color:#424242}
+        input,textarea{width:100%;padding:.75rem;border:1px solid #ddd;border-radius:4px;font-size:1rem;font-family:inherit}
+        input:focus,textarea:focus{outline:none;border-color:#1976d2}
+        textarea{min-height:150px;resize:vertical}
+        .btn{display:inline-block;padding:.75rem 1.5rem;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-weight:500;transition:background .3s;border:none;cursor:pointer;font-size:1rem}
+        .btn:hover{background:#1565c0}
+        .btn:active{background:#0d47a1}
+        footer{background:#424242;color:#fff;padding:2rem 0;margin-top:3rem;text-align:center}
+        footer a{color:#90caf9;text-decoration:none}
+        footer a:hover{text-decoration:underline}
+        .back-link{display:inline-block;margin-top:2rem;padding:.75rem 1.5rem;background:#1976d2;color:#fff;text-decoration:none;border-radius:4px;font-weight:500;transition:background .3s}
+        .back-link:hover{background:#1565c0}
+        @media (max-width:768px){h1{font-size:1.5rem}h2{font-size:1.5rem}.container{padding:0 12px}header .container{flex-direction:column;gap:.5rem;align-items:flex-start}.logo{font-size:1.25rem}.nav-link{margin-left:0;margin-top:.5rem;display:block}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">16KB Pagesize</div>
+            <div style="display:flex;align-items:center;flex-wrap:wrap">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="privacy.html" class="nav-link">隐私政策</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>如果您有任何问题、建议或反馈，欢迎通过以下方式与我们联系。</p>
+
+            <div class="contact-info">
+                <h2>联系方式</h2>
+                
+                <div class="contact-item">
+                    <strong>📧 邮箱</strong>
+                    <p>请通过 GitHub Issues 或以下邮箱联系我们：</p>
+                    <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+                    <p style="font-size:.875rem;color:#757575;margin-top:.5rem">（请将 example.com 替换为实际邮箱地址）</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>🐙 GitHub</strong>
+                    <p>提交问题、建议或贡献代码：</p>
+                    <p><a href="https://github.com/your-username/16kb-pagesize-site" target="_blank" rel="noopener">GitHub Repository</a></p>
+                    <p style="font-size:.875rem;color:#757575;margin-top:.5rem">（请将 your-username 替换为实际 GitHub 用户名）</p>
+                </div>
+
+                <div class="contact-item">
+                    <strong>⏰ 响应时间</strong>
+                    <p>我们会在 2-3 个工作日内回复您的邮件或 GitHub Issues。</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>在线留言</h2>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">邮箱 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">主题 *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">留言内容 *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">发送留言</button>
+                </form>
+                <p id="formMessage" style="margin-top:1rem;display:none"></p>
+            </div>
+
+            <div style="background:#e3f2fd;padding:1.5rem;border-radius:8px;margin:2rem 0">
+                <h2>常见问题</h2>
+                <h3 style="font-size:1.1rem;margin-top:1rem;color:#1976d2">Q: 如何下载资源？</h3>
+                <p>访问首页，点击相应的下载按钮即可下载资源。</p>
+                
+                <h3 style="font-size:1.1rem;margin-top:1rem;color:#1976d2">Q: 网站是否免费使用？</h3>
+                <p>是的，本网站完全免费提供资源下载服务。</p>
+                
+                <h3 style="font-size:1.1rem;margin-top:1rem;color:#1976d2">Q: 如何报告问题？</h3>
+                <p>请通过 GitHub Issues 或邮箱联系我们，我们会尽快处理。</p>
+            </div>
+
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 16KB Pagesize 优化与资源下载站. 保留所有权利.</p>
+            <p>
+                <a href="privacy.html">隐私政策</a> | 
+                <a href="contact.html">联系我们</a>
+            </p>
+            <p style="margin-top:1rem;font-size:.875rem;color:#bdbdbd">创建人: Fanei</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const messageDiv = document.getElementById('formMessage');
+            
+            // 获取表单数据
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+            
+            // 这里可以添加实际的表单提交逻辑
+            // 例如：发送到后端 API 或使用邮件服务
+            
+            // 显示提示信息
+            messageDiv.style.display = 'block';
+            messageDiv.style.color = '#1976d2';
+            messageDiv.textContent = '感谢您的留言！我们会尽快回复。注意：当前为演示模式，实际部署时需要配置后端服务。';
+            
+            // 重置表单
+            form.reset();
+            
+            // 3秒后隐藏提示
+            setTimeout(() => {
+                messageDiv.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
+
+
