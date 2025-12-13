@@ -67,8 +67,8 @@
                         <h2>资源下载</h2>
                         <p>以下资源专为 16KB Pagesize 优化设计，可直接下载使用：</p>
                         
-                        <a href="#ijkplayer_so_download" class="btn" id="ijkplayerBtn">下载 ijkplayer 16KB SO</a>
-                        <a href="#flutter_16kb_repo" class="btn" id="flutterBtn">获取 Flutter 16KB 资源</a>
+                        <a href="downloads/16kb_page_size.zip" class="btn" id="ijkplayerBtn" download="16kb_page_size.zip">下载 ijkplayer 16KB SO</a>
+                        <a href="https://pub.dev/packages/td_fplayer" class="btn" id="flutterBtn" target="_blank" rel="noopener">获取 Flutter 16KB 资源</a>
                     </section>
                 </div>
 
@@ -102,18 +102,6 @@
 
     <!-- Smooth Scroll Script -->
     <script>
-        document.getElementById('ijkplayerBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            // 这里可以添加实际的下载逻辑或跳转
-            window.location.href = '#ijkplayer_so_download';
-        });
-        
-        document.getElementById('flutterBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            // 这里可以添加实际的下载逻辑或跳转
-            window.location.href = '#flutter_16kb_repo';
-        });
-        
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
