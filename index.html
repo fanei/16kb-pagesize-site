@@ -15,7 +15,7 @@
         header{background:#1976d2;color:#fff;padding:1rem 0;box-shadow:0 2px 4px rgba(0,0,0,.1)}
         header .container{display:flex;align-items:center;justify-content:space-between}
         .logo{font-size:1.5rem;font-weight:700}
-        main{padding:2rem 0;min-height:calc(100vh - 200px)}
+        main{padding:1.25rem 0;min-height:calc(100vh - 200px)}
         section{margin-bottom:3rem}
         h1{font-size:2rem;margin-bottom:1rem;color:#1976d2}
         h2{font-size:1.75rem;margin-bottom:.75rem;color:#424242;border-bottom:2px solid #e0e0e0;padding-bottom:.5rem}
@@ -28,7 +28,7 @@
         footer{background:#424242;color:#fff;padding:2rem 0;margin-top:3rem;text-align:center}
         footer a{color:#90caf9;text-decoration:none}
         footer a:hover{text-decoration:underline}
-        .ads-container{margin:1.5rem 0;text-align:center;min-height:100px}
+        .ads-container{margin:1rem 0;text-align:center}
         @media (max-width:768px){h1{font-size:1.5rem}h2{font-size:1.5rem}.container{padding:0 12px}header .container{flex-direction:column;gap:.5rem}.logo{font-size:1.25rem}.btn{display:block;width:100%;margin:.5rem 0}}
         @media (min-width:769px){.content-wrapper{display:grid;grid-template-columns:1fr 300px;gap:2rem}.sidebar{position:sticky;top:20px;height:fit-content}}
     </style>
@@ -95,6 +95,13 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         (adsbygoogle = window.adsbygoogle || []).push({});
+        setTimeout(() => {
+            document.querySelectorAll('.ads-container').forEach(container => {
+                const ins = container.querySelector('ins.adsbygoogle');
+                if (!ins) return;
+                if (ins.getBoundingClientRect().height === 0) container.style.display = 'none';
+            });
+        }, 1500);
     </script>
 
     <!-- Smooth Scroll Script -->
