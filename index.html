@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="16KB Pagesize 优化与资源下载 - 高性能静态网站，专注于 Google 16KB Pagesize 理念">
-    <title>16KB Pagesize 优化与资源下载</title>
+    <meta name="description" content="16KB Pagesize optimization and downloads - a high-performance static site focused on Google's 16KB Pagesize principle">
+    <title>16KB Pagesize Optimization & Downloads</title>
     <!-- Google AdSense 网站验证 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6190901558128381"
      crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
     <header>
         <div class="container">
             <div class="logo">16KB Pagesize</div>
-            <div>优化与资源下载</div>
+            <div>Optimization & Downloads</div>
         </div>
     </header>
 
@@ -51,24 +51,24 @@
             <div class="content-wrapper">
                 <div class="main-content">
                     <section class="content-section">
-                        <h1>16KB Pagesize 优化与资源下载</h1>
+                        <h1>16KB Pagesize Optimization & Downloads</h1>
                         
-                        <h2>什么是 16KB Pagesize？</h2>
-                        <p>Google 提出的 16KB Pagesize 理念是 Web 性能优化的核心原则之一。它强调首次加载的关键资源（HTML、CSS、JavaScript）应该控制在 16KB 以内，以确保页面能够在单次网络往返（RTT）中完成关键渲染路径的加载。这一理念基于现代网络协议和浏览器渲染机制，旨在实现极致的首屏加载速度。</p>
+                        <h2>What is 16KB Pagesize?</h2>
+                        <p>Google's 16KB Pagesize principle is a practical performance guideline: keep the critical, first-load payload (HTML and the truly critical CSS/JS) within ~16KB so the browser can start rendering within a single network round trip (RTT) on many connections.</p>
                         
-                        <h3>为什么 16KB 如此重要？</h3>
-                        <p>在典型的 TCP/IP 网络中，初始拥塞窗口（Initial Congestion Window）通常为 10-14 个数据包，每个数据包约 1.4KB。这意味着在第一次往返时间内，浏览器最多只能接收约 14-16KB 的数据。如果关键资源超过这个限制，浏览器就需要等待额外的网络往返，导致首屏渲染延迟。通过将关键资源控制在 16KB 以内，我们可以确保页面在第一次网络往返后就能开始渲染，大幅提升用户体验。</p>
+                        <h3>Why does 16KB matter?</h3>
+                        <p>On many networks, the initial congestion window limits how much data can arrive in the first RTT. If the critical rendering path exceeds that budget, the browser waits for another round trip and the first paint is delayed. Staying small helps pages feel instant.</p>
                         
-                        <h3>实现 16KB Pagesize 的关键技术</h3>
-                        <p>实现这一目标需要多方面的优化策略：首先，将关键 CSS 内联到 HTML 的 &lt;head&gt; 标签中，避免额外的 HTTP 请求；其次，使用代码分割和延迟加载技术，将非关键 JavaScript 代码推迟执行；再次，采用资源压缩（Gzip/Brotli）和代码混淆，减少传输体积；最后，优化 HTML 结构，移除不必要的空白和注释，使用语义化标签提高解析效率。这些技术的综合运用，能够将页面关键资源压缩到 16KB 以内，实现极速加载。</p>
+                        <h3>How to achieve it</h3>
+                        <p>Inline critical CSS in the &lt;head&gt;, defer non-critical JavaScript, compress assets (Gzip/Brotli), and keep HTML lean by removing unnecessary whitespace/comments. Combine these techniques to keep the first-load experience fast.</p>
                     </section>
 
                     <section class="download-section">
-                        <h2>资源下载</h2>
-                        <p>以下资源专为 16KB Pagesize 优化设计，可直接下载使用：</p>
+                        <h2>Downloads</h2>
+                        <p>Resources optimized for a 16KB-first-load mindset:</p>
                         
-                        <a href="downloads/16kb_page_size.zip" class="btn" id="ijkplayerBtn" download="16kb_page_size.zip">下载 ijkplayer 16KB SO</a>
-                        <a href="https://pub.dev/packages/td_fplayer" class="btn" id="flutterBtn" target="_blank" rel="noopener">获取 Flutter 16KB 资源</a>
+                        <a href="downloads/16kb_page_size.zip" class="btn" id="ijkplayerBtn" download="16kb_page_size.zip">Download ijkplayer 16KB SO</a>
+                        <a href="https://pub.dev/packages/td_fplayer" class="btn" id="flutterBtn" target="_blank" rel="noopener">Get Flutter 16KB resources</a>
                     </section>
                 </div>
 
@@ -84,17 +84,15 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 16KB Pagesize 优化与资源下载站. 保留所有权利.</p>
+            <p>&copy; 2024 16KB Pagesize Optimization & Downloads. All rights reserved.</p>
             <p>
-                <a href="privacy.html">隐私政策</a> | 
-                <a href="contact.html">联系我们</a>
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="contact.html">Contact</a>
             </p>
-            <p style="margin-top:1rem;font-size:.875rem;color:#bdbdbd">创建人: Fanei</p>
+            <p style="margin-top:1rem;font-size:.875rem;color:#bdbdbd">Creator: Fanei</p>
         </div>
     </footer>
 
-    <!-- Google AdSense Script -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6190901558128381" crossorigin="anonymous"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
         (adsbygoogle = window.adsbygoogle || []).push({});
@@ -102,7 +100,7 @@
 
     <!-- Smooth Scroll Script -->
     <script>
-        // 平滑滚动
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
